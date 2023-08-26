@@ -8,6 +8,8 @@ html {
     margin: 0;
 
     color: var(--color-black);
+
+    background: url('./img/backgroundback3.png');
 }
 
 a {
@@ -78,7 +80,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 2rem 0 5rem var(--main-padding);
-    background: url(./img/backgroundback3.png);
+    /* background: url(./img/backgroundback3.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,7 +130,7 @@ body {
 .mirror-hello {
     text-align: center;
     padding: 2rem var(--main-padding);
-    background: url('./img/backgroundback2\(coins\).png');
+    /* background: url('./img/backgroundback2\(coins\).png'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -145,13 +147,32 @@ body {
     width: 38vw;
 }
 
-.mirror-hello__tittle {
+.tittle {
     font-size: 2.3rem;
 }
 
-.mirror-hello__text {
+.text {
     color: var(--color-grey);
     line-height: 28.8px;
+}
+
+
+.access {
+    display: flex;
+    justify-content: space-between;
+    padding-right: var(--main-padding);
+}
+
+.access__left-side {
+    background: url('./img/yoga-girl.png');
+    min-width: 30vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.access__right-side {
+    text-align: center;
 }
 
 
