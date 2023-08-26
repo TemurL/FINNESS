@@ -1,6 +1,6 @@
 html {
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     --color-black: #1B1B20;
     --color-grey: #626262;
     --color-pink: #D61FDA;
@@ -42,7 +42,7 @@ body {
 }
 
 .header__nav {
-    font-size: 16px;
+    font-size: 0.7em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -88,8 +88,8 @@ body {
 
 .intro__tittle {
     font-family: 'Fredoka', sans-serif;
-    font-size: 64px;
-    line-height: 78.8px;
+    font-size: 2.6rem;
+    line-height: 3.2rem;
 }
 
 .intro__parag {
@@ -160,15 +160,17 @@ body {
 .access {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-right: var(--main-padding);
 }
 
 .access__left-side {
     background: url('./img/yoga-girl.png');
     min-width: 30vw;
+    height: 25rem;
     background-repeat: no-repeat;
     background-size: contain;
-
+    background-position: center left;
 }
 
 .access__right-side {
@@ -218,16 +220,17 @@ body {
     background: transparent;
     letter-spacing: 1.28px;
     margin: 32px;
+    outline: none;
 }
 
 .footer__input-field input::-webkit-input-placeholder {
-    color: white;
+    color: rgba(255, 255, 255, 0.63);
 }
 
 
 .footer__text, .footer__info {
     font-weight: 200;
-    font-size: 28px;
+    font-size: 1.17rem;
     line-height: 33.6px;
 }
 
