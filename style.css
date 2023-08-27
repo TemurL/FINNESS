@@ -1,15 +1,17 @@
 html {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     --color-black: #1B1B20;
     --color-grey: #626262;
     --color-pink: #D61FDA;
+    --gragient-accent-back: linear-gradient(133deg, #FFF5DD 0%, rgba(170, 86, 254, 0.32) 37.22%, rgba(254, 86, 217, 0.28) 58.14%, rgba(86, 254, 254, 0.28) 100%);
     --main-padding: 10vw;
     margin: 0;
 
     color: var(--color-black);
 
-    background: url('./img/backgroundback3.png');
+    background: url('./img/backgroundback2\(coins\).png');
+    background-size: contain;
 }
 
 a {
@@ -80,7 +82,6 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 2rem 0 5rem var(--main-padding);
-    /* background: url(./img/backgroundback3.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -90,11 +91,12 @@ body {
     font-family: 'Fredoka', sans-serif;
     font-size: 2.6rem;
     line-height: 3.2rem;
+    font-weight: 500;
 }
 
 .intro__parag {
     color: var(--color-grey);
-    margin: 3rem 0;
+    margin: 1.5rem 0 2.3rem;
 }
 
 .intro__img {
@@ -103,11 +105,10 @@ body {
     background-position:center right;
     background-size: contain;
     background-repeat: no-repeat;
-    background-clip: unset;
 }
 
 .cards-sec {
-    background: linear-gradient(133deg, #FFF5DD 0%, rgba(170, 86, 254, 0.32) 37.22%, rgba(254, 86, 217, 0.28) 58.14%, rgba(86, 254, 254, 0.28) 100%);
+    background: var(--gragient-accent-back);
     text-align: center;
     padding: 4rem var(--main-padding);
     display: flex;
@@ -161,7 +162,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: var(--main-padding);
+    gap: 2rem;
+    padding: 1rem var(--main-padding) 1rem 0;
 }
 
 .access__left-side {
@@ -183,20 +185,22 @@ body {
 .footer {
     display: flex;
     justify-content: space-evenly;
-    align-items: end;
+    align-items: stretch;
     background: url('./img/background-footer.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: top;
     padding: 3rem var(--main-padding) 0;
+    margin-top: 2rem;
 }
 
 .footer__left-side {
+    min-width: 30vw;
     line-height: 0;
-}
-
-.footer__left-side img {
-    width: 30vw;
+    background: url('./img/footer-girl-2-footer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
 }
 
 .footer__right-side {
@@ -210,6 +214,14 @@ body {
     font-weight: 700;
 }
 
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 .footer__input-field input {
     height: 51px;
     border: 1px solid white;
@@ -219,19 +231,54 @@ body {
     color: white;
     background: transparent;
     letter-spacing: 1.28px;
-    margin: 32px;
+    /* margin: 32px; */
     outline: none;
 }
 
 .footer__input-field input::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.63);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 
 .footer__text, .footer__info {
-    font-weight: 200;
+    font-weight: 300;
     font-size: 1.17rem;
     line-height: 33.6px;
+}
+
+.footer__info {
+    font-size: 1rem;
+}
+
+
+.earning {
+    text-align: center;
+    border-radius: 20px;
+    background: var(--gragient-accent-back);
+    margin: var(--main-padding);
+    padding: 2.5rem 1.8rem;
+}
+
+.earning__tittle {
+    margin-top: 0;
+}
+
+.earning__steps-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.earning__step {
+    flex: 1;
+}
+
+.earning__step-does {
+    text-align: start;
+    padding: 0;
+    font-size: 0.6rem;
 }
 
 
@@ -248,11 +295,32 @@ body {
         text-align: center;
     }
 
+    .input-field {
+        justify-content: center;
+    }
+
 }
 
-@media screen and (max-width: 1100px) {
-    html {
-        --main-padding: 2vw;
+@media screen and (max-width: 1020px) {
+
+    .intro {
+        padding-inline: var(--main-padding);
+    }
+
+    .intro__img {
+        display: none;
+    }
+
+    .intro__text {
+        text-align: center;
+    }
+
+    .access {
+        padding-inline: var(--main-padding);
+    }
+
+    .access__left-side {
+        display: none;
     }
 
     .nav {
