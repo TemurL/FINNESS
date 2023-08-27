@@ -181,6 +181,75 @@ body {
 
 
 
+.earning {
+    text-align: center;
+    border-radius: 20px;
+    background: var(--gragient-accent-back);
+    margin: var(--main-padding);
+    padding: 2.5rem 1.8rem;
+    box-shadow: 0 0 40px 20px #00000029;
+}
+
+.earning__tittle {
+    margin-top: 0;
+}
+
+.earning__steps-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.earning__step {
+    flex: 1;
+}
+
+.earning__step-does {
+    text-align: start;
+    padding: 0;
+    font-size: 0.6rem;
+}
+
+
+.calc {
+    padding: .5rem var(--main-padding);
+    margin-block: 2rem;
+}
+
+.calc__tittle {
+    text-align: center;
+}
+
+.calc__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.calc__table {
+    background: linear-gradient(103deg, rgba(170, 86, 254, 0.32) 1.02%, rgba(255, 112, 223, 0.28) 27.60%, rgba(141, 237, 250, 0.28) 51.56%, rgba(255, 255, 255, 0.00) 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 0 40px 20px #00000029;
+    margin: 2rem;
+}
+
+tr th:nth-child(2) {
+    text-align: end;
+}
+
+tr th:nth-child(1) {
+    text-align: start;
+}
+
+tr td:nth-child(2) {
+    color: var(--color-grey);
+    text-align: end;
+}
+
 
 .footer {
     display: flex;
@@ -249,38 +318,6 @@ body {
 .footer__info {
     font-size: 1rem;
 }
-
-
-.earning {
-    text-align: center;
-    border-radius: 20px;
-    background: var(--gragient-accent-back);
-    margin: var(--main-padding);
-    padding: 2.5rem 1.8rem;
-}
-
-.earning__tittle {
-    margin-top: 0;
-}
-
-.earning__steps-list {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.earning__step {
-    flex: 1;
-}
-
-.earning__step-does {
-    text-align: start;
-    padding: 0;
-    font-size: 0.6rem;
-}
-
 
 @media screen and (max-width: 1200px) {
     html {
