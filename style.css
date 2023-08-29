@@ -70,14 +70,14 @@ a {
 }
 
 .header__menu-btn_active {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 
 .page__mob-menu {
     position: fixed;
     width: 100%;
     transition: 0.5s;
-    transform: translateY(-130%);
+    transform: translateY(-100%);
     visibility: hidden;
     max-height: 90vh;
     overflow: auto;
@@ -89,7 +89,6 @@ a {
     transform: translateY(0);
     overflow: scroll;
     border-bottom: 4px solid var(--color-black);
-    /* box-shadow: 0px 0px 200px 50vh #000000d4; */
 }
 
 .mob-menu__nav {
@@ -475,6 +474,10 @@ tr td:nth-child(2) {
 }
 
 @media screen and (max-width: 700px) {
+    html {
+        background-size: cover;
+    }
+
     .calc__img img {
         width: 50%;
     }
