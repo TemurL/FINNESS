@@ -7,9 +7,8 @@ html {
     --gragient-accent-back: linear-gradient(133deg, #FFF5DD 0%, rgba(170, 86, 254, 0.32) 37.22%, rgba(254, 86, 217, 0.28) 58.14%, rgba(86, 254, 254, 0.28) 100%);
     --main-padding: 10vw;
     margin: 0;
-
+    scroll-behavior: smooth;
     color: var(--color-black);
-
     background: url('./img/backgroundback2\(coins\).png');
     background-size: contain;
 }
@@ -56,7 +55,7 @@ a {
     justify-content: space-between;
     list-style: none;
     padding: 0;
-    margin-inline: 1rem;
+    /* margin-inline: 1rem; */
 }
 
 .header__menu-btn {
@@ -71,24 +70,24 @@ a {
 
 .header__menu-btn_active {
     transform: rotate(180deg);
+    background-image: url('./img/menu-close.png');
+    background-size: 130%;
 }
 
 .page__mob-menu {
     position: fixed;
     width: 100%;
+    transform: translateY(-135%);
     transition: 0.5s;
-    transform: translateY(-100%);
-    visibility: hidden;
     max-height: 90vh;
     overflow: auto;
     background-color: white;
+    overflow: scroll;
+    border-bottom: 4px solid var(--color-black);
 }
 
 .mob-menu_active {
-    visibility: visible;
     transform: translateY(0);
-    overflow: scroll;
-    border-bottom: 4px solid var(--color-black);
 }
 
 .mob-menu__nav {
@@ -106,6 +105,7 @@ a {
 
 .mob-menu__nav li {
     padding-block: 1rem;
+    word-wrap: break-word;
 }
 
 .header__a {
@@ -459,18 +459,15 @@ tr td:nth-child(2) {
         display: none;
     }
 
-    .header__nav {
-        display: none;
-    }
-
     .header__douwnload-button {
         display: none;
     }
+}
 
-    .header__menu-btn {
-        display: block;
+@media screen and (min-width: 700px) {
+    .page__mob-menu {
+        display: none;
     }
-    
 }
 
 @media screen and (max-width: 700px) {
@@ -498,6 +495,15 @@ tr td:nth-child(2) {
 
     .tittle {
         font-size: 1.3rem;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+
+    .header__menu-btn {
+        display: block;
     }
 }
 
