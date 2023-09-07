@@ -55,7 +55,6 @@ a {
     justify-content: space-between;
     list-style: none;
     padding: 0;
-    /* margin-inline: 1rem; */
 }
 
 .header__menu-btn {
@@ -70,8 +69,23 @@ a {
 
 .header__menu-btn_active {
     transform: rotate(180deg);
-    background-image: url('./img/menu-close.png');
-    background-size: 130%;
+    background: none
+}
+
+.header__menu-btn_active::before,
+.header__menu-btn_active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #8E24AA;
+    transform: translateY(15px) rotate(45deg);
+}
+
+.header__menu-btn_active::after {
+    transform: translateY(15px) rotate(-45deg);
 }
 
 .page__mob-menu {
@@ -418,6 +432,51 @@ tr td:nth-child(2) {
     font-size: 1rem;
 }
 
+
+
+/* ====================================
+SECOND PAGE 
+================= */
+
+.token-fitcoin {
+    margin: 2.5rem var(--main-padding);
+    display: flex;
+}
+
+.token-fitcoin__img {
+    background: url('./img/second-page/coinscoins.png') center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex: 1;
+}
+
+
+.token-fitcoin__text {
+    text-align: center;
+    color: var(--color-grey);
+    font-weight: 300;
+    flex: 1;
+}
+
+.token-fitcoin__parag p:first-child {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: var(--color-black);
+    margin-block: 1rem 0.3rem;
+}
+
+.token-fitcoin__tittle {
+    color: var(--color-black);
+}
+
+
+
+/* ==============
+SECOND PAGE 
+======================================= */
+
+
+
 @media screen and (max-width: 1200px) {
     html {
         --main-padding: 5vw;
@@ -462,6 +521,10 @@ tr td:nth-child(2) {
     .header__douwnload-button {
         display: none;
     }
+
+    .token-fitcoin__img {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -472,7 +535,7 @@ tr td:nth-child(2) {
 
 @media screen and (max-width: 700px) {
     html {
-        background-size: cover;
+        background: none;
     }
 
     .calc__img img {
@@ -521,11 +584,15 @@ tr td:nth-child(2) {
     }
 
     .calc__table {
-        margin-inline: 0;
-        padding-inline: 0.2rem;
+        margin-inline: 1rem;
+        border-collapse: collapse;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
     }
     .calc__table td {
         border-bottom: 1px solid;
+        padding-block: 1rem 0.3rem;
     }
 
     .input-field input {
