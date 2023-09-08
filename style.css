@@ -250,7 +250,7 @@ a {
 
 
 
-.earning {
+.block-with-items {
     text-align: center;
     border-radius: 20px;
     background: var(--gragient-accent-back);
@@ -259,11 +259,11 @@ a {
     box-shadow: 0 0 40px 20px #00000029;
 }
 
-.earning__tittle {
+.block-with-items__tittle {
     margin-top: 0;
 }
 
-.earning__steps-list {
+.block-with-items__items-list {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -271,11 +271,11 @@ a {
     flex-wrap: wrap;
 }
 
-.earning__step {
+.block-with-items__item {
     flex: 1;
 }
 
-.earning__step-does {
+.block-with-items__item-does {
     text-align: start;
     padding: 0;
     font-size: 0.6rem;
@@ -441,12 +441,15 @@ SECOND PAGE
 .token-fitcoin {
     margin: 2.5rem var(--main-padding);
     display: flex;
+    align-items: center;
 }
 
 .token-fitcoin__img {
     background: url('./img/second-page/coinscoins.png') center;
     background-size: contain;
     background-repeat: no-repeat;
+    min-height: 30vh;
+    aspect-ratio: 1/1;
     flex: 1;
 }
 
@@ -522,8 +525,8 @@ SECOND PAGE
         display: none;
     }
 
-    .token-fitcoin__img {
-        display: none;
+    .token-fitcoin {
+       flex-direction: column;
     }
 }
 
@@ -571,7 +574,7 @@ SECOND PAGE
 }
 
 @media screen and (max-width: 425px) {
-    .earning {
+    .block-with-items {
         margin: 0;
     }
 
