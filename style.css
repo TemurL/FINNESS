@@ -443,7 +443,9 @@ SECOND PAGE
     margin: 2.5rem var(--main-padding);
     display: flex;
     align-items: center;
+    visibility: inherit;
 }
+
 
 .token-fitcoin__img {
     background: url('./img/second-page/coinscoins.png') center;
@@ -511,6 +513,177 @@ SECOND PAGE
     margin-block: 2rem 1rem;
 }
 
+
+.stat {
+    background-image: var(--gragient-accent-back-revers);
+    border-radius: 20px;
+    padding: 1rem 4rem;
+    margin: 2rem calc(var(--main-padding) - 4rem);
+    box-shadow: -10px 10px 50px 15px rgba(0, 0, 0, 0.10), 10px 10px 60px 0px rgba(255, 255, 255, 0.40) inset;
+
+}
+
+.stat__content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stat__content > * {
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.295);
+    padding: 1rem;
+    width: 20vw;
+    min-width: max-content;
+    aspect-ratio: 1/0.67;
+}
+
+.stat h3 {
+    margin: 0;
+}
+
+.stat__table {
+    padding: 1rem;
+}
+
+.stat__table table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.stat__table table td {
+    padding: 5px 0;
+}
+
+.stat__pie-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 1.5rem;
+}
+
+.pie-legend__li {
+    padding: 5px 0px;
+    transition: 0.2s;
+    transition-delay: 0.15s;
+    cursor:default;
+    font-weight: 600;
+}
+
+.pie-legend__li:hover,
+.pie-legend__li_active {
+    padding: 17px 0px;
+}
+
+.pie-legend__li_unset {
+    color: #62626296;
+}
+
+
+.pie-legend__Ecosystem-Treasury {
+    list-style-image: url('./img/second-page/pie-chart/marks/Vector 19.svg');
+}
+.pie-legend__Dev-Fund {
+    list-style-image: url('./img/second-page/pie-chart/marks/Vector 13.svg');
+}
+.pie-legend__Team {
+    list-style-image: url('./img/second-page/pie-chart/marks/Vector 14.svg');
+}
+.pie-legend__Rewards-Listing {
+    list-style-image: url('./img/second-page/pie-chart/marks/Vector 18.svg');
+}
+.pie-legend__Train-To-Earn {
+    list-style-image: url('./img/second-page/pie-chart/marks/Vector 15.svg');
+}
+.pie-legend__Close-Entities {
+    list-style-image: url('./img/second-page/pie-chart/marks/Vector 16.svg');
+}
+.pie-legend__Seed {
+    list-style-image: url('./img/second-page/pie-chart/marks/Vector 17.svg');
+}
+.pie-legend__Public {
+    list-style-image: url('./img/second-page/pie-chart/marks/Vector 18-1.svg');
+}
+
+
+
+.pie-chart {
+    display: inline-block;
+}
+
+.pie {
+    position: relative;
+    width: 285px;
+    aspect-ratio: 1/1;
+    margin: 0;
+    display: inline-block;
+}
+
+.pie__part {
+    position: absolute;
+    transition: 0.3s;
+}
+
+.svg-for-clip {
+    background-color: aquamarine;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+
+.deepBlue {
+    top: 0;
+    left: 109px;
+    clip-path: url(#clip-deepBlue);
+}
+.orange {
+    top: 42px;
+    left: 142px;
+    z-index: 1;
+    transform: scale(0.9);
+    clip-path: url(#clip-orange);
+}
+.green {
+    top: 68px;
+    left: 0px;
+    clip-path: url(#clip-green);
+}
+.blue {
+    top: 91px;
+    left: 168px;
+    clip-path: url(#clip-blue);
+}
+.purpule {
+    top: 151px;
+    left: 167px;
+    clip-path: url(#clip-purpule);
+}
+.pink {
+    top: 4px;
+    left: 20px;
+    clip-path: url(#clip-pink);
+}
+.grey {
+    top: 149px;
+    left: 7px;
+    clip-path: url(#clip-grey);
+}
+.yellow {
+    top: 154.4px;
+    left: 143px;
+    clip-path: url(#clip-yellow);
+}
+
+.pie__part_active,
+.pie__part:hover {
+    transform: scale(1.22);
+    z-index: 2;
+}
 
 /* ==============
 SECOND PAGE 
