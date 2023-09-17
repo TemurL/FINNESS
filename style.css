@@ -99,6 +99,7 @@ a {
     background-color: white;
     overflow: scroll;
     border-bottom: 4px solid var(--color-black);
+    z-index: 20;
 }
 
 .mob-menu_active {
@@ -518,6 +519,7 @@ SECOND PAGE
     background-image: var(--gragient-accent-back-revers);
     border-radius: 20px;
     padding: 1rem 4rem;
+    padding-bottom: 2rem;
     margin: 2rem calc(var(--main-padding) - 4rem);
     box-shadow: -10px 10px 50px 15px rgba(0, 0, 0, 0.10), 10px 10px 60px 0px rgba(255, 255, 255, 0.40) inset;
 
@@ -535,7 +537,7 @@ SECOND PAGE
     border-radius: 20px;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.295);
     padding: 1rem;
-    width: 20vw;
+    /* width: 20vw; */
     min-width: max-content;
     aspect-ratio: 1/0.67;
 }
@@ -569,14 +571,8 @@ SECOND PAGE
 .pie-legend__li {
     padding: 5px 0px;
     transition: 0.2s;
-    transition-delay: 0.15s;
     cursor:default;
     font-weight: 600;
-}
-
-.pie-legend__li:hover,
-.pie-legend__li_active {
-    padding: 17px 0px;
 }
 
 .pie-legend__li_unset {
@@ -685,6 +681,95 @@ SECOND PAGE
     z-index: 2;
 }
 
+
+.diagrams__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.diagrams__buttons {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12.5px);
+    border-radius: 6px;
+    border: 1px white solid;
+    padding: 5px 4px 5px 10px;
+    color: #493045;
+}
+
+.diagrams__button {
+    position: relative;
+    padding: 0 6px 0 0;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+.diagrams__button:not(:last-child) {
+    border-right: 1px #4930457b solid;
+}
+
+.diagrams__button::before {
+    content: '';
+    position: absolute;
+    inset: -1px -3px;
+    width: calc(100% - 6px);
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: -1;
+    border-radius: 4px;
+    padding: 1px 3px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0);
+    transition: 0.2s;
+}
+.diagrams__button_active::before {
+    background-color: rgba(255, 255, 255, 0.814);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+}
+
+.diagrams__content {
+    position: relative;
+    height: 90%;
+}
+
+.diagrams__diagram {
+    display: none;
+    position: absolute;
+    inset: 0;
+    padding: 10px 40px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.diagrams__diagram_active {
+    display: flex;
+}
+
+.diagrams__diagram .element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.diagrams__diagram .column {
+    border-radius: 5px;
+    background: linear-gradient(187deg, #914FFB 12.2%, #FA31FE 93.97%);
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px;
+    animation: column-grow 0.6s;
+}
+
+@keyframes column-grow {
+    from {
+        height: 0px;
+    }
+}
+
+
 /* ==============
 SECOND PAGE 
 ======================================= */
@@ -706,6 +791,10 @@ SECOND PAGE
 
     .input-field {
         justify-content: center;
+    }
+
+    .stat {
+        margin: 2rem 0;
     }
 
 }
