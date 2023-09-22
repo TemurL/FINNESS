@@ -19,8 +19,11 @@ let modDiagramBlock = 'diagrams__diagram_active';
 
 const diagramsColunmsHightSet = () => {
     for (let i = 0; i < diagramsColumns.length; i++) {
-        let value = parseInt(diagramsColumns[i].textContent) + 50;
-        diagramsColumns[i].style.height = `${value}px`
+        let value = parseInt(diagramsColumns[i].textContent) /100 * 80;
+        if (parseInt(diagramsColumns[i].textContent) < 10) {
+            value = (value * 10) + 20;
+        }
+        diagramsColumns[i].style.height = `${value}%`
     }
 }
 
