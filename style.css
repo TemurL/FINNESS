@@ -9,6 +9,7 @@ html {
     --main-padding: 10vw;
     margin: 0;
     scroll-behavior: smooth;
+    scroll-padding-top: 1.5rem;
     color: var(--color-black);
     background: url('./img/backgroundback2\(coins\).png');
     background-size: contain;
@@ -342,10 +343,17 @@ tr td:nth-child(2) {
 
 .mirrorX img {
     width: 55%;
+    transition: 0.3s;
 }
 
 .mirrorS img {
     width: 40%;
+    transition: 0.3s;
+}
+
+.mirrorX img:hover,
+.mirrorS img:hover {
+    transform: scale(1.3);
 }
 
 .mirror-buy__img {
@@ -887,7 +895,10 @@ SECOND PAGE
         background-image: var(--gragient-accent-back);
         box-shadow: 0 0 44px 0px #2d002a4a;
     }
-
+    .mirrorX img:hover,
+    .mirrorS img:hover {
+        transform: none;
+    }
     .tittle {
         font-size: 1.3rem;
         text-transform: uppercase;
@@ -990,5 +1001,9 @@ SECOND PAGE
 
     .intro__tittle {
         font-size: 2rem;
+    }
+
+    .diagrams__diagram {
+        padding-inline: 0;
     }
 }
