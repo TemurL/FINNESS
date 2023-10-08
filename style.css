@@ -146,6 +146,11 @@ a {
     box-shadow: 0px 0px 16px 0px #654086;
     white-space: nowrap;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.pink-button:hover {
+    box-shadow: 0px 0px 0px 0px #654086;
 }
 
 .intro {
